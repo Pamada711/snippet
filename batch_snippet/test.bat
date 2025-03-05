@@ -1,0 +1,10 @@
+REM Snipett
+
+@ECHO OFF
+SETLOCAL
+PUSHD "%~dp0"
+
+ECHO SAMPLE
+
+POPD
+PAUSE
