@@ -1,10 +1,16 @@
-REM Snipett
-
 @ECHO OFF
 SETLOCAL
 PUSHD "%~dp0"
 
-ECHO SAMPLE
+SET REN=USER
+
+REM 管理者権限チェック
+OPENFILES > null 2>&1
+IF NOT %ERRORLEVEL% == 0 (
+    ECHO USER
+) ELSE (
+    ECHO ADMIN
+)
 
 POPD
 PAUSE
